@@ -11,7 +11,7 @@ const View = async ({ id }: { id: string }) => {
 
   after(
     async () =>
-      await writeClient
+      await writeClient 
         .patch(id)
         .set({ views: totalViews + 1 })
         .commit(),
